@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI, 55 PS5 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every one of the game's <strong>55 trophies</strong> — official name, description and grade, a guide in plain words with every claim cited, a roadmap to the platinum, a missable watch, and a tracker that remembers what you earned. No account, no network, nothing leaves this page.</p>
+  <div class="facts" id="facts"></div>
+  <div class="audit" id="audit" aria-label="Audit"></div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-tab="tracker" class="on">Tracker</button>
+  <button type="button" data-tab="roadmap">Roadmap</button>
+  <button type="button" data-tab="missables">Missables</button>
+  <button type="button" data-tab="sources">Sources</button>
+</nav>
+
+<section id="tab-tracker" class="tabpage">
+  <div class="progress" aria-label="Progress">
+    <div class="progress-head">
+      <div>
+        <p class="big" id="progressText">0 of 55 earned</p>
+        <p class="sub" id="progressSub">0% to the platinum</p>
+      </div>
+      <div class="grade-counts" id="gradeCounts"></div>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="hint">Tick a trophy when you earn it — your progress is saved in this browser. Export it to a file before you clear your browser data.</p>
+  </div>
+
+  <div class="nextup" aria-label="Next up">
+    <h2>Next up · roadmap order</h2>
+    <ol id="nextUp"></ol>
+  </div>
+
+  <div class="warn" aria-label="Missable warning">
+    <h2>⚠ One trophy can be missed</h2>
+    <p><strong>Positive Mental Attitude</strong> — meditate at all 18 spots. One spot is at Jason's house and is only open in <strong>Chapter 1</strong>. Meditate there before Chapter 1 ends, or the trophy may be locked for the playthrough. Everything else can be earned after the story. See the <strong>Missables</strong> tab for the full watch list.</p>
+  </div>
+
+  <div class="controls" aria-label="Filters">
+    <input id="search" type="search" placeholder="Search a trophy or a mission…" aria-label="Search trophies">
+    <div class="kinds" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="on">All 55</button>
+      <button type="button" data-kind="story">Story</button>
+      <button type="button" data-kind="missable">Missable</button>
+      <button type="button" data-kind="collectibles">Collectibles</button>
+      <button type="button" data-kind="activities">Activities</button>
+      <button type="button" data-kind="online">Online</button>
+    </div>
+    <label class="grade-pick">Grade
+      <select id="grade" aria-label="Filter by grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="spoiler"><input id="spoiler" type="checkbox"> Spoiler-free mode</label>
+    <div class="io">
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <p class="count" id="count"></p>
+  </div>
+
+  <main class="grid" id="grid" aria-label="Trophy checklist"></main>
+</section>
+
+<section id="tab-roadmap" class="tabpage" hidden>
+  <div class="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="sub">Five stages, in order — about 200 hours in total (PowerPyx, KeenGamer). Story first, then strangers, then activities, then collectibles, then the crime and money cleanup — and the 100% completion trophy last. Stages overlap: the 100% checklist fills during stages 2–4.</p>
+    <ol class="stages" id="stages"></ol>
+  </div>
+</section>
+
+<section id="tab-missables" class="tabpage" hidden>
+  <div class="missables" aria-label="Missable windows">
+    <h2>Missable windows · 9 trophies to watch</h2>
+    <p class="sub">Built from the official descriptions and the guides. Only one trophy is possibly missable; the other eight are <strong>watch</strong>, not missable — every one of them stays open in free-roam after the story. The grid shows each trophy's last chance by chapter.</p>
+    <div class="tablewrap"><table class="watchgrid" id="watchGrid"></table></div>
+    <div id="watchNotes"></div>
+    <h2>Story gates · chapter by chapter</h2>
+    <p class="sub">Main missions by chapter, as listed by the PowerPyx walkthrough and The Games Wiki. The gates tell you what locks when — the full mission list is in the walkthrough.</p>
+    <ol class="gates" id="gates"></ol>
+    <h2>Disputes shown both ways</h2>
+    <div id="disputes"></div>
+  </div>
+</section>
+
+<section id="tab-sources" class="tabpage" hidden>
+  <div class="sources-page" aria-label="Sources">
+    <h2>Sources · every claim cited</h2>
+    <p class="sub">Each guide step carries numbered refs to this list. Page addresses are shown as plain text, never as links — this guide fetches nothing.</p>
+    <ol class="sourcelist" id="sourceList"></ol>
+    <h2>Trophy × source · claims each source backs</h2>
+    <p class="sub">A filled cell means the source backs at least one step of that trophy's guide. Read the columns beside the list above.</p>
+    <div class="tablewrap"><table class="matrix" id="matrix"></table></div>
+    <h2>Sources &amp; honesty</h2>
+    <p>Official names, descriptions and grades are as PlayStation publishes them (Exophase and PSNProfiles trophy lists, 18 November 2026). Each guide step names its sources beside it. The game released 19 November 2026 and guides are still confirming a few unlocks: where a method is unconfirmed, the guide says so instead of guessing — a cited, honest guide beats a detailed invented one. No guide text here is copied from another guide.</p>
+    <p>Hidden trophies: 28 of the 55 stay hidden on PlayStation until earned (12 story trophies and 16 side ones). This guide marks them HIDDEN. Turn on spoiler-free mode in the Tracker to hide story trophy names and descriptions until you tick them earned.</p>
+    <p>All 55 trophies are offline and single-player. There are no online trophies. Cheats disable trophies and saving, so leave cheats off for a trophy run (reported by GTABase and PowerPyx).</p>
+  </div>
+</section>
+
+<footer>
+  <p>Leonida Trophy Guide — an unofficial fan guide. Not affiliated with Rockstar Games. No Rockstar logo, artwork or game images are used. Works fully offline.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
