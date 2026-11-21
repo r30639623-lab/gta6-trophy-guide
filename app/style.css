@@ -153,8 +153,8 @@ select { background: var(--panel); color: var(--text); border: 1px solid var(--l
 .import { color: var(--muted); font-size: 14px; cursor: pointer; }
 .import input { font-size: 12px; max-width: 170px; }
 .count { width: 100%; margin: 0; color: var(--muted); font-size: 13px; }
-.grid { padding: 20px 0 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
-.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.grid { padding: 20px 0 8px; columns: 3; column-gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; break-inside: avoid; margin-bottom: 12px; }
 .card.earned { border-color: var(--green); }
 .card.missable { border-color: var(--gold); }
 .card.watchcard { border-color: #8a6d2f; }
@@ -198,7 +198,7 @@ select { background: var(--panel); color: var(--text); border: 1px solid var(--l
 .dispute-box { background: rgba(245, 185, 66, 0.08); border: 1px solid var(--gold); border-radius: 10px; padding: 10px 12px; margin: 8px 0; font-size: 13px; }
 .dispute-box p { margin: 0 0 6px; }
 .dispute-box p:last-child { margin: 0; }
-.empty { grid-column: 1 / -1; color: var(--muted); background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 20px; }
+.empty { column-span: all; color: var(--muted); background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 20px; }
 .tablewrap { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); border-radius: 12px; }
 .watchgrid, .matrix { border-collapse: collapse; width: 100%; background: var(--panel); font-size: 13px; }
 .watchgrid th, .watchgrid td, .matrix th, .matrix td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
@@ -225,5 +225,5 @@ select { background: var(--panel); color: var(--text); border: 1px solid var(--l
 footer { max-width: 1180px; margin: 0 auto; padding: 20px 24px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 @media (max-width: 640px) {
   h1 { font-size: 32px; }
-  .grid { grid-template-columns: 1fr; }
+  .grid { columns: 1; }
 }
